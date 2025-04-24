@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jua&family=Noto+Sans+Sinhala:wght@100..900&family=Pacifico&family=Sniglet:wght@400;800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    z-index: 1000;
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 80px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: auto;
+    gap:14px;
+  }
+  
+  .nav-links {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    gap: 28px;
+    color: var(--text-color2);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: none;
+  
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .navbar.menu-open {
+    background-color: transparent !important;
+  }
+  
+  .menu-toggle.black .toggle-line {
+    background-color:var(--text-color3);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 20px; 
+    top: 40px; 
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 24px;
+    z-index: 1001; 
+  }
+  
+  .toggle-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.open .toggle-line:nth-child(1) {
+    transform: translateY(0px) rotate(45deg);
+  }
+  
+  .menu-toggle.open .toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open .toggle-line:nth-child(3) {
+    transform: translateY(-20px) rotate(145deg);
+  }
+  
+  .mobile-menu {
+    position: relative;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--text-color2);
+    z-index: 999;
+    transition: transform 0.3s ease-out;
+    display: none;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding-top: 85.37px; 
+  }
+
+.mobile-menu.open {
+    display: flex;
+    transform: translateX(-100%);
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    width: 335px;
+    padding: 10px 20px 20px; 
+    margin-left: 0px; 
+  }
+
+.mobile-nav-link {
+  color: #100C08;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Styles for screens between 1200px and 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .navbar-container {
+      padding: 26px 60px;
+    }
+    
+  }
+  
+/* Styles for screens between 768px and 1199px */
+@media (min-width: 768px) and (max-width: 1199px){
+    .navbar-container {
+      padding: 26px 40px;
+    }
+    
+    .nav-links {
+        display: flex;
+      gap: 24px;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+      
+    .mobile-menu {
+        display: none !important;
+    }
+  }
+  
+
+  
+ /* Styles for screens between 375px and 767px */
+@media (min-width: 375px) and (max-width: 767px) {
+    
+    .nav-links {
+      display: none;
+    }
+    
+    .menu-toggle {
+        right: 20px;
+        top: 50px;
+        display: flex;
+    }
+      
+    .menu-toggle.open {
+        position: fixed;
+        top: 40px; 
+        right: 20px; 
+    }
+    .mobile-menu:not(.open) {
+        display: none;
+    }
+
+    .navbar.menu-open .logo-container {
+        display: none;
+    }
+    
+    .mobile-menu {
+      position: fixed;
+      padding-top: 0;
+    }
+    .mobile-menu-content {
+        padding-top: 50px;
+        margin-left: 10px;
+      }
+    .logo-container {
+        margin-right: auto; /* Pushes other items to right */
+      }
+  }
+  
+  /* Small mobile devices */
+  @media (max-width: 374px) {
+    .navbar-container {
+      padding: 20px 15px;
+    }
+    
+    .mobile-menu-content {
+      width: 90%;
+    }
+  }

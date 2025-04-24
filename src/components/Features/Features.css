@@ -1,0 +1,138 @@
+.features-section {
+    padding: 100px 0;
+    background-color: var(--text-color2);
+  }
+  
+  .feature-block {
+    margin-bottom: 20px;
+  }
+  
+  .feature-block:last-child {
+    margin-bottom: 0;
+  }
+  
+  .feature-image {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .feature-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .feature-content {
+    padding: 30px;
+    text-align: left;
+  }
+  
+  .feature-title {
+    font-family: poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 33px;
+    letter-spacing: 0.4px;
+  }
+  
+  .feature-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color:var(--text-color3);
+    line-height: 100%;
+    letter-spacing: 0%;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .feature-button {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color2);
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .feature-block .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .feature-block.reverse .row {
+    flex-direction: row-reverse;
+  }
+  
+
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .feature-title {
+      font-size: 28px;
+    }
+    
+    .feature-content {
+      padding: 20px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .feature-content {
+      padding: 20px;
+    }
+    
+    .feature-title {
+      font-size: 26px;
+    }
+   
+    .feature-block .row > [class*="col-"] {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Mobile styles  */
+  @media (max-width: 767px) {
+    .features-section {
+      padding: 50px 0;
+    }
+    
+    .feature-content {
+      text-align: center;
+      padding: 20px 15px;
+    }
+    .feature-image {
+        padding: 0px;
+    }
+    .feature-block {
+      margin-bottom: 50px;
+    }
+    
+    .feature-title {
+        padding: 0 70px;
+        font-size: 27px;
+      }
+    
+    .feature-button {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+    
+    /* Stack columns on mobile */
+    .feature-block .row {
+      flex-direction: column;
+    }
+    
+    .feature-block.reverse .row {
+      flex-direction: column;
+    }
+    
+    .feature-block .row > [class*="col-"] {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
