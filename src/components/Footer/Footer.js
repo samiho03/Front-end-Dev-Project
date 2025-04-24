@@ -32,7 +32,7 @@ const Footer = () => {
               <h4 className="link-title">Our Technologies</h4>
               <ul>
                 {technologies.map((tech, index) => (
-                  <li key={index}><a href="#LandingPage.js">{tech}</a></li>
+                  <li key={index}><a href="#!">{tech}</a></li>
                 ))}
               </ul>
             </div>
@@ -41,7 +41,7 @@ const Footer = () => {
               <h4 className="link-title">Our Services</h4>
               <ul>
                 {services.map((service, index) => (
-                  <li key={index}><a href="#LandingPage.js">{service}</a></li>
+                  <li key={index}><a href="#!">{service}</a></li>
                 ))}
               </ul>
             </div>
