@@ -32,7 +32,11 @@ const Footer = () => {
               <h4 className="link-title">Our Technologies</h4>
               <ul>
                 {technologies.map((tech, index) => (
-                  <li key={index}><a href="#!">{tech}</a></li>
+                  <li key={index}>
+                    <a href={`/technologies/${tech.toLowerCase().replace(/\s+/g, '-')}`}>
+                      {tech}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -41,7 +45,11 @@ const Footer = () => {
               <h4 className="link-title">Our Services</h4>
               <ul>
                 {services.map((service, index) => (
-                  <li key={index}><a href="#!">{service}</a></li>
+                  <li key={index}>
+                    <a href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                      {service}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -50,9 +58,9 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="legal-links">
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <span className="divider">|</span>
-            <a href="#">Terms & Conditions</a>
+            <a href="/terms-conditions">Terms & Conditions</a>
           </div>
         </div>
       </div>
