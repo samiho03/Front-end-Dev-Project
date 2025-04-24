@@ -169,6 +169,9 @@
   
  /* Styles for screens between 375px and 767px */
 @media (min-width: 375px) and (max-width: 767px) {
+     .navbar-container {
+        padding: 26px 25px;
+    }
     
     .nav-links {
       display: none;
